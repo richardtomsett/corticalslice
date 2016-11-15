@@ -141,7 +141,7 @@ end
 % established number of all:one connections and the invertingRatioArr
 CP = struct();
 for iPost = 1:numGroups
-  CP(iPost).numConnectionsToAllFromOne = cell(1,numLayers);
+  CP(iPost).numConnectionsToAllFromOne = cell(1,numGroups);
   for iPre = 1:numGroups
     CP(iPost).numConnectionsToAllFromOne{iPre} = ...
          (round(ConnectivityData(iPre).numConnectionsToOneFromAll(:,iPost) ...
